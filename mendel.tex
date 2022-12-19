@@ -1,0 +1,177 @@
+%16 варик
+
+\documentclass{article}
+\usepackage[russian]{babel}
+\usepackage{multirow}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=0.5cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphics}
+\usepackage{nicematrix}
+
+\definecolor{redelem}{RGB}{249, 180, 183}
+\definecolor{rednum}{RGB}{219,109,112}
+
+\definecolor{yellowelem}{RGB}{255,253,192}
+\definecolor{yellownum}{RGB}{247,234,96}
+
+\definecolor{blueelem}{RGB}{193,235,251}
+\definecolor{bluenum}{RGB}{115,191,225}
+
+\newcommand{\periodiccell}[7]{
+    \Block[fill=#6]{}{
+    \begin{tabular}{l r}
+        \huge{\textbf{#1}} & \colorbox{#7}{#4} \\
+        \tiny{#2} & #5 \\
+        \tiny{\textbf{#3}} & \\
+    \end{tabular}
+    }
+}
+
+\newcommand{\periodiccellmet}[7]{
+    \Block[fill=#6]{}{
+    \begin{tabular}{l r}
+        \colorbox{#7}{#4} & \huge{\textbf{#1}} \\
+        #5 & \tiny{#2} \\
+        & \tiny{\textbf{#3}}\\
+    \end{tabular}
+    }
+}
+
+\begin{document}
+\scalebox{0.3}{
+    \begin{NiceTabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+    %\periodiccell{H}{Hydrogenium}{Водород}{1}{1.00794}{redelem}{rednum} &
+    \hline
+        \multirow{2}{*}{ПЕРИОДЫ} & \multirow{2}{*}{РЯДЫ} & \multicolumn{10}{c}{ГРУППЫ ЭЛЕМЕНТОВ} \\
+    %\hline
+    \cline{3-12}
+        & & I & II & III & IV & V & VI & VII & \multicolumn{3}{c}{VIII}\\
+    \hline
+        1 & 1 & 
+        \periodiccell{H}{Hydrogenium}{Водород}{1}{1,00794}{redelem}{rednum} &
+        \multicolumn{6}{c}{ПЕРИОДИЧЕСКАЯ СИСТЕМА ХИМИЧЕСКИХ ЭЛЕМЕНТОВ Д.И.МЕНДЕЛЕЕВА} &
+        \periodiccell{He}{Helium}{Гелий}{2}{4,002602}{redelem}{rednum} &
+        \multicolumn{2}{c}{}\\
+        
+    \hline
+    
+        2 & 2 &
+        \periodiccell{Li}{Lithium}{Литий}{3}{6,941}{redelem}{rednum} &
+        \periodiccell{Be}{Beryllium}{Бериллий}{4}{9,012182}{redelem}{rednum}&
+        \periodiccell{B}{Borum}{Бор}{5}{10,811}{yellowelem}{yellownum} &
+        \periodiccell{C}{Carboneum}{Углерод}{6}{12,0107}{yellowelem}{yellownum} &
+        \periodiccell{N}{Nitrogenium}{Азот}{7}{14,0067}{yellowelem}{yellownum} &
+        \periodiccell{O}{Oxygenium}{Кислород}{8}{15,9994}{yellowelem}{yellownum} &
+        \periodiccell{F}{Fluorum}{Фтор}{9}{18,998}{yellowelem}{yellownum}&
+        \periodiccell{Ne}{Neon}{Неон}{10}{20,1797}{yellowelem}{yellownum} &
+        \multicolumn{2}{c}{}\\
+        
+        \hline
+        
+        3 & 3 & 
+        \periodiccell{Na}{Natrium}{Натрий}{11}{22,99}{redelem}{rednum}&
+        \periodiccell{Mg}{Magnesium}{Магний}{12}{24,305}{redelem}{rednum}&
+        \periodiccell{Al}{Aluminium}{Алюминий}{13}{26,9815386}{yellowelem}{yellownum} &
+        \periodiccell{Si}{Silicium}{Кремний}{14}{28,0855}{yellowelem}{yellownum} &
+        \periodiccell{P}{Phosphorus}{Фосфор}{15}{30,973762}{yellowelem}{yellownum}&
+        \periodiccell{S}{Sulfur}{Сера}{16}{32,065}{yellowelem}{yellownum} &
+        \periodiccell{Cl}{Chlorum}{Хлор}{17}{35,453}{yellowelem}{yellownum} &
+        \periodiccell{Ar}{Argon}{Аргон}{18}{39,948}{yellowelem}{yellownum} &
+        \multicolumn{2}{c}{}\\
+
+        \hline
+        
+        \multirow{2}{*}{4} & 4 &
+        \periodiccell{K}{Kalium}{Калий}{19}{39,0983}{redelem}{rednum}&
+        \periodiccell{Ca}{Calcium}{Кальций}{20}{40,078}{redelem}{rednum} &
+        \periodiccellmet{Sc}{Scandium}{Скандий}{21}{44,955912}{blueelem}{bluenum}&
+        \periodiccellmet{Ti}{Titanium}{Титан}{22}{47,867}{blueelem}{bluenum}&
+        \periodiccellmet{V}{Vanadium}{Ванадий}{23}{50,9415}{blueelem}{bluenum}&
+        \periodiccellmet{Cr}{Chromium}{Хром}{24}{51,9961}{blueelem}{bluenum}&
+        \periodiccellmet{Mn}{Manganum}{Марганец}{25}{54,938045}{blueelem}{bluenum}&
+        \periodiccellmet{Fe}{Ferrum}{Железо}{26}{55,845}{blueelem}{bluenum}&
+        \periodiccellmet{Co}{Cobaltum}{Кобальт}{27}{58,933195}{blueelem}{bluenum}&
+        \periodiccellmet{Ni}{Niccolum}{Никель}{28}{58,6934}{blueelem}{bluenum}
+        \\
+
+        \cline{2-12}
+        & 5 &
+        \periodiccellmet{Cu}{Cuprum}{Медь}{29}{63,546}{blueelem}{bluenum} &
+        \periodiccellmet{Zn}{Zincum}{Цинк}{30}{65,409}{blueelem}{bluenum}&
+        \periodiccell{Ga}{Gallium}{Галлий}{31}{69,723}{yellowelem}{yellownum}&
+        \periodiccell{Ge}{Germanium}{Германий}{32}{72,64}{yellowelem}{yellownum}&
+        \periodiccell{As}{Arsenicum}{Мышьяк}{33}{74,9216}{yellowelem}{yellownum}&
+        \periodiccell{Se}{Selenium}{Селен}{34}{78,96}{yellowelem}{yellownum} &
+        \periodiccell{Br}{Bromum}{Бром}{35}{79,904}{yellowelem}{yellownum}&
+        \periodiccell{Kr}{Krypton}{Криптон}{36}{83,798}{yellowelem}{yellownum} 
+        \\
+        \hline
+        
+        \multirow{2}{*}{5} & 6 &
+        \periodiccell{Rb}{Rubidium}{Рубидий}{37}{85,4678}{redelem}{rednum} &
+        \periodiccell{Sr}{Strontium}{Стронций}{38}{87,62}{redelem}{rednum} &
+        \periodiccellmet{Y}{Yttrium}{Иттрий}{39}{88,90585}{blueelem}{bluenum}&
+        \periodiccellmet{Zr}{Zirconium}{Цирконий}{40}{91,224}{blueelem}{bluenum} &
+        \periodiccellmet{Nb}{Niobium}{Ниобий}{41}{92,90638}{blueelem}{bluenum}&
+        \periodiccellmet{Mo}{Molybdaenum}{Молибден}{42}{95,94}{blueelem}{bluenum} &
+        \periodiccellmet{Tc}{Technetium}{Технеций}{43}{[98,9063]}{blueelem}{bluenum}&
+        \periodiccellmet{Ru}{Ruthenium}{Рутений}{44}{101,07}{blueelem}{bluenum} &
+        \periodiccellmet{Rh}{Rhodium}{Родий}{45}{102,9055}{blueelem}{bluenum}&
+        \periodiccellmet{Pd}{Palladium}{Палладий}{46}{106,42}{blueelem}{bluenum}
+        \\
+        \cline{2-12}
+
+        & 7 &
+        \periodiccellmet{Ag}{Argentum}{Серебро}{47}{107,8682}{blueelem}{bluenum} &
+        \periodiccellmet{Cd}{Cadmium}{Кадмий}{48}{112,411}{blueelem}{bluenum} &
+        \periodiccell{In}{Indium}{Индий}{49}{114,818}{yellowelem}{yellownum}&
+        \periodiccell{Sn}{Stannum}{Олово}{50}{118,710}{yellowelem}{yellownum} &
+        \periodiccell{Sb}{Stibium}{Сурьма}{51}{121,760}{yellowelem}{yellownum} &
+        \periodiccell{Te}{Tellurium}{Теллур}{52}{127,60}{yellowelem}{yellownum} &
+        \periodiccell{I}{Iodium}{Иод}{53}{126,90447}{yellowelem}{yellownum}&
+        \periodiccell{Xe}{Xenon}{Ксенон}{54}{131,293}{yellowelem}{yellownum}
+        \\
+        \hline
+
+        \multirow{2}{*}{6} & 8 &
+        \periodiccell{Cs}{Caesium}{Цезий}{55}{132,9054519}{redelem}{rednum}&
+        \periodiccell{Ba}{Barium}{Барий}{56}{137,327}{redelem}{rednum}&
+        \periodiccellmet{La}{Lanthanum}{Лантан}{57}{138,90547}{blueelem}{bluenum} &
+        \periodiccellmet{Hf}{Hafnium}{Гафний}{72}{178,49}{blueelem}{bluenum}&
+        \periodiccellmet{Ta}{Tantalum}{Тантал}{73}{180,9479}{blueelem}{bluenum}&
+        \periodiccellmet{W}{Wolframium}{Вольфрам}{74}{183,84}{blueelem}{bluenum}&
+        \periodiccellmet{Re}{Rhenium}{Рений}{75}{186,207}{blueelem}{bluenum}&
+        \periodiccellmet{Os}{Osmium}{Осмий}{76}{190,23}{blueelem}{bluenum} &
+        \periodiccellmet{Ir}{Iridium}{Иридий}{77}{192,22}{blueelem}{bluenum}&
+        \periodiccellmet{Pt}{Platinum}{Платина}{78}{195,08}{blueelem}{bluenum}
+        \\
+        \cline{2-12}
+
+        & 9 &
+        \periodiccellmet{Au}{Aurum}{Золото}{79}{196,967}{blueelem}{bluenum}&
+        \periodiccellmet{Hg}{Hydrargyrum}{Ртуть}{80}{200,59}{blueelem}{bluenum}&
+        \periodiccell{Tl}{Thallium}{Таллий}{81}{204,38}{yellowelem}{yellownum}&
+        \periodiccell{Pb}{Plumbum}{Свинец}{82}{207,19}{yellowelem}{yellownum}&
+        \periodiccell{Bi}{Bismuthum}{Висмут}{83}{208,98}{yellowelem}{yellownum}&
+        \periodiccell{Po}{Polonium}{Полоний}{84}{209,98}{yellowelem}{yellownum}&
+        \periodiccell{At}{Astatum}{Астат}{85}{209,99}{yellowelem}{yellownum}&
+        \periodiccell{Rn}{Radon}{Радон}{86}{[222]}{yellowelem}{yellownum}
+        \\
+        \hline
+
+        7 & 10 &
+        \periodiccell{Fr}{Francium}{Франций}{87}{[223]}{redelem}{rednum}&
+        \periodiccell{Ra}{Radium}{Радий}{88}{[226]}{redelem}{rednum}&
+        \periodiccellmet{Ac**}{Actinium}{Актиний}{89}{[227]}{blueelem}{bluenum}&
+        \periodiccellmet{Rf}{Rutherfordium}{Резерфордий}{104}{[261]}{blueelem}{bluenum}&
+        \periodiccellmet{Db}{Dubnium}{Дубний}{105}{[262]}{blueelem}{bluenum}&
+        \periodiccellmet{Sg}{Seaborgium}{Сиборгий}{106}{[263]}{blueelem}{bluenum}&
+        \periodiccellmet{Bh}{Bohrium}{Борий}{107}{[262]}{blueelem}{bluenum}&
+        \periodiccellmet{Hs}{Hassium}{Хассий}{108}{[265]}{blueelem}{bluenum}&
+        \periodiccellmet{Mt}{Meitnerium}{Мейтнерий}{109}{[266]}{blueelem}{bluenum}&
+        \periodiccellmet{}{}{}{110}{[269]}{blueelem}{bluenum}
+        \\
+        \hline
+    \end{NiceTabular}
+}
+\end{document}

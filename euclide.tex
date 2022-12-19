@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{multicol}
+\input{insbox}
+\setlength{\parindent}{0cm}
+\usepackage[a5paper,top=2cm,bottom=2cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage[utf8]{inputenc}
+\begin{document}
+    \begin{multicols}{2}
+
+    \tikz{
+    \filldraw[color=blue!50,fill=white, very thick] circle (2);
+    \draw [line width=0.05cm,red] (-1.54,-1.28) -- (1.96,-0.34);
+    \draw  (-1.54,-1.29) node[anchor=north] {$B$} (1.96,-0.34) node[anchor=west]{$D$};
+
+    \draw [line width=0.05cm,black] (-2,0) -- (1.14,-1.63);
+    \draw  (-2,0) node[anchor=east] {$A$} (1.14,-1.63) node[anchor=west]{$C$};
+    }
+    
+    \columnbreak
+    
+    \section*{КНИГА III ПРЕДЛ. IV. ТЕОРЕМА}
+
+    \InsertBoxL{0}{\includegraphics[width=0.1\textwidth]{E.jpg}}
+    сли \textit{сли в круге две прямые, не проходящие че-
+рез центр, пересекаются, они не делят друг
+друга пополам.}
+
+    Если одна из прямых проходит через центр, очевидно, она ее не может рассекать пополам другая прямая, не проходящая через центр.
+    
+    Но если ни одна из прямых\tikz{\draw [line width=0.1cm,black] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$A$};
+                \draw (1.5,0) node[anchor=south] {$c$};}
+    или
+    \tikz{\draw [line width=0.1cm,red] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$B$};
+                \draw (1.5,0) node[anchor=south] {$D$};}
+    не проходит через центр, проведем
+    \tikz{\draw [line width=0.1cm,dashed,black] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$E$};
+                \draw (1.5,0) node[anchor=south] {$F$};}
+    из центра к точке их пересечения.
+
+    \begin{center}
+    Если \tikz{\draw [line width=0.1cm,black] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$A$};
+                \draw (1.5,0) node[anchor=south] {$c$};}
+    делится пополам, \tikz{\draw [line width=0.1cm,dashed,black] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$E$};
+                \draw (1.5,0) node[anchor=south] {$F$};}
+    $\perp$ ей(пр. III.3)
+    
+    \scalebox{0.7}{\tikz{
+    \draw [thick,fill=blue!80] (0,0)--(0.94,0.34) arc(20:80:1) -- (0,0);
+    \draw (0,0) node[anchor=north] {$E$};
+    \draw (0.94,0.34) node[anchor=west] {$D$};
+    \draw (0.17,0.98) node[anchor=south] {$F$};
+    }
+    }
+    =
+    \scalebox{0.7}{
+    \tikz{
+    \draw [thick] (-1,0)--(0,0)--(0,1) [line width=0.1cm] arc(90:180:1);
+    }};
+
+    и
+    \scalebox{0.7}{\tikz{
+    \draw [thick,fill=blue!80] (0,0)--(0.94,0.34) arc(20:80:1) -- (0,0);
+    \draw (0,0) node[anchor=north] {$E$};
+    \draw (0.94,0.34) node[anchor=west] {$D$};
+    \draw (0.17,0.98) node[anchor=south] {$F$};
+    }
+    }
+    =
+    \scalebox{0.7}{\tikz{
+    \draw [thick,fill=blue!80] (0,0)--(0.17,0.98) arc(80:20:1) -- (0,0);
+    \draw [fill=yellow] (0,0) -- (0.94,0.34) arc(20:-20:1) -- (0,0);
+    \draw (0,0) node[anchor=north] {$E$};
+    \draw (0.94,-0.34) node[anchor=west] {$C$};
+    \draw (0.17,0.98) node[anchor=south] {$F$};
+    }
+    };
+    
+    часть равна целому, что невозможно.
+
+    \tikz{\draw [line width=0.1cm,black] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$A$};
+                \draw (1.5,0) node[anchor=south] {$C$};}
+    и
+    \tikz{\draw [line width=0.1cm,red] (0,0)--(1.5,0);
+                \draw (0,0) node[anchor=south] {$B$};
+                \draw (1.5,0) node[anchor=south] {$D$};}
+    не делят друг друга пополам.
+    \end{center}
+    \begin{flushright}ч.т.д.\end{flushright}
+    \end{multicols}
+\end{document}
